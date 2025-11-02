@@ -1,21 +1,19 @@
 "use strict";
-class user {
-    constructor(name) {
-        this.name = name;
-    }
-    hello() {
-        console.log("hi there");
-    }
-}
-class Employee extends user {
-    constructor(name) {
-        super(name);
-        this.greet = () => {
-            return "hi" + this.name;
-        };
-        this.name = name;
-    }
-}
-let emp = new Employee("ramam");
-console.log(emp.name);
-console.log(emp.greet());
+// abstract class user {
+//     name : string
+//     constructor(name : string){
+//         this.name=name
+//     }
+let e = {
+    name: "DAKSH",
+    startDate: "2020-01-01",
+};
+let n = {
+    name: "DAKSH",
+    department: "electronics",
+};
+let t = {
+    name: "DAKSH",
+    startDate: "2020-01-01",
+    department: "electronics",
+};

@@ -37,77 +37,104 @@
 // console.log(ans);
 
 
-interface People {
-    name:string,
-    age: number,
-}
-
-// let person : People = {
-//     name:"Daksh",
-//     age:21,
-
-//     greet: () => {
-//         return "hi"     
-//     },
+// interface People {
+//     name:string,
+//     age: number,
 // }
 
-// class Manager implements People {
-//     name:string
-//     age: number
-//     number : string
-//     constructor(name: string , age : number) {
-//         this.name=name
-//         this.age=age
-//         this.number="92763"
+// // let person : People = {
+// //     name:"Daksh",
+// //     age:21,
+
+// //     greet: () => {
+// //         return "hi"     
+// //     },
+// // }
+
+// // class Manager implements People {
+// //     name:string
+// //     age: number
+// //     number : string
+// //     constructor(name: string , age : number) {
+// //         this.name=name
+// //         this.age=age
+// //         this.number="92763"
+// //     }
+// // }
+
+// // let user=new Manager("Daksh",21)
+// // console.log(user.age);
+
+
+// class shape {
+//     area(){
+//         console.log("hi there");
+        
 //     }
 // }
 
-// let user=new Manager("Daksh",21)
-// console.log(user.age);
+// class rectangle extends shape{
+//     width:number
+//     height:number
+
+//     constructor(width : number,height:number
+//     ){
+//         super()
+//         this.width= 1
+//         this.height=2
+//     }
+// }
+
+// const r=new rectangle(2,2)
+// r.area() 
+
+// interface userType {
+//     name:string,
+//     age:number,
+//     isLegal():boolean
+// }
+
+// class User implements userType {
+//     name:string
+//     age:number
+//     constructor(name:string, age:number){
+//         this.name=name
+//         this.age=age
+//     }
+
+//     isLegal(): boolean {
+//         return this.age>=18
+//     }
+// }
+
+// let m=new User("daksh",21)
+// console.log(m.name);
+// console.log(m.isLegal());
 
 
-class shape {
-    area(){
-        console.log("hi there");
-        
-    }
+
+interface User {
+    Name: string;
+    lName: string;
+    age: number;
 }
 
-class rectangle extends shape{
-    width:number
-    height:number
-
-    constructor(width : number,height:number
-    ){
-        super()
-        this.width= 1
-        this.height=2
+function Legal(users: User[]) {
+    // return users.filter((u) => u.age >= 18);
+    let ans= []
+    for(let i=0;i<users.length;i++){
+        if(users[i].age >= 18){
+            ans.push(users[i])
+        }
     }
+    return ans;
 }
 
-const r=new rectangle(2,2)
-r.area() 
 
-interface userType {
-    name:string,
-    age:number,
-    isLegal():boolean
-}
+const result = Legal([
+    { Name: "Daksh", lName: "Shah", age: 21 },
+]);
 
-class User implements userType {
-    name:string
-    age:number
-    constructor(name:string, age:number){
-        this.name=name
-        this.age=age
-    }
 
-    isLegal(): boolean {
-        return this.age>=18
-    }
-}
-
-let m=new User("daksh",21)
-console.log(m.name);
-console.log(m.isLegal());
+console.log("Legal users (18+):", result);
 

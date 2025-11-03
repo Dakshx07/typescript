@@ -16,18 +16,18 @@
 // console.log(directions.Up);
 // console.log(directions.down);
 
-const app=express()
+// const app=express()
 
-enum ResponseStatus{
-    success=200,
-    notFound=404,
-    serverError=500
-}
+// enum ResponseStatus{
+//     success=200,
+//     notFound=404,
+//     serverError=500
+// }
 
-app.get('/',(req,res) => {
-    if(!req.query.userId){
+// app.get('/',(req,res) => {
+//     if(!req.query.userId){
 
-    }
-})
+//     }
+// })
 
 
